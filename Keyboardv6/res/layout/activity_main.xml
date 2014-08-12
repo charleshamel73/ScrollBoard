@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${packageName}.${activityClass}" >
+
+    <HorizontalScrollView
+        android:id="@+id/textHolder"
+        android:layout_width="match_parent"
+        android:background="@android:color/transparent" 
+        android:layout_height="90dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp" >
+
+        <LinearLayout
+            android:id="@+id/text"
+            android:background="@android:color/transparent" 
+            android:padding="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/keyHolder"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/CapsLock"
+        android:background="@android:color/transparent"
+        android:minHeight="80dp" >
+
+        <LinearLayout
+            android:id="@+id/key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent" 
+            android:layout_gravity="start"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <FrameLayout
+        android:id="@+id/livefeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="0dp" >
+
+    </FrameLayout>
+    
+    <ToggleButton
+        android:id="@+id/CapsLock"
+        android:layout_width="wrap_content"
+        android:textOn="Caps on"
+   		android:textOff="Caps off"
+    	android:onClick="onToggleClicked"
+        android:layout_height="90dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/keyHolder"/>
+
+</RelativeLayout>
